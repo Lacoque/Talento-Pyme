@@ -91,7 +91,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="section-servicies">
     <div class="services">
       <h1>Servicios</h1>
       <div class="card-group">
@@ -148,40 +148,62 @@
     </div>
   </section>
 
-  <section>
+  <section id="colaboraciones">
+    <h2>Colaboramos activamente con</h2>
     <div class="clientes">
-      <img src="/assets/img/all-health.jpg" alt="">
-      <img src="/assets/img/cuevas.jpg" alt="">
-      <img src="/assets/img/dipra.png" alt="">
-      <img src="/assets/img/ita.jpeg" alt="">
-      <img src="/assets/img/house.jpg" alt="">
+      <img src="/assets/img/clientes/all-health.svg" alt="">
+      <img src="/assets/img/clientes/cuevas.svg" alt="">
+      <img src="/assets/img/clientes/dipra.svg" alt="">
+      <img src="/assets/img/clientes/+house.svg" alt="">
+      <img src="/assets/img/clientes/ita.svg" alt="">
     </div>
   </section>
 
   <section id="form">
     <div class="formulario">
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
-          <label>Your Name: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Your Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Your Role: <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <div><img src="/assets/img/Form-Enviar.svg" alt=""></div>
+      <div class="info-gral">
+        <h2>Postulate!</h2>
+        <p>Al postularte te incorporamos a nuestra base de datos para informarte de nuevas propuestas laborales!</p>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label><input type="text" name="name" placeholder="Nombre" /></label>
+          </p>
+          <p>
+            <label><input type="email" name="email" placeholder="Correo"/></label>
+          </p>
+          <p>
+            <label><input type="number" name="phone" placeholder="Teléfono"/></label>
+          </p>
+          <p>
+            <label><input type="text" name="zone" placeholder="Zona de residencia"/></label>
+          </p>
+          <p class="enviar">
+            Gracias por sumarte!
+            <button type="submit">Enviar<i class="fa-solid fa-arrow-right"></i></button>
+          </p>
+        </form>
+      </div>
     </div>
 
+  </section>
+
+  <section>
+    <footer>
+      <div>
+        <img src="/assets/img/marca-tpyme.svg" alt="">
+        <div>
+          <p>© 2025 - Talento Pyme.</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
+      </div>
+      <div class="cx">
+        <div>
+          <p>Hecho con cariño por</p>
+          <a href="http://contenidx.com.ar" target="_blank" rel="noopener noreferrer">Contenidx</a>
+        </div>
+      </div>
+    </footer>
   </section>
 
   <script src="/animations.js"></script>
