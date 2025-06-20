@@ -62,6 +62,7 @@
     --Negro-Texto: #414141;
     --Gris-Secundario: #E4E4E4;
     --Gradiente-Violeta: linear-gradient(90deg, #C45ECF, #3B1140);
+    --Gradiente-Violeta-90: linear-gradient(-90deg, #C45ECF, #3B1140);
     --Gradiente-Vio-Ama: linear-gradient(61deg,rgba(106, 39, 113, 1) 0%, rgba(196, 94, 207, 1) 50%, rgba(245, 128, 32, 1) 100%);
 
   }
@@ -142,7 +143,7 @@
   font-weight: 500;
   font-size: small;
   text-align: start;
-  color: #317e1a;
+  color: var(--Negro-Texto);
   background: linear-gradient(180deg, #fff, rgb(255, 255, 255, .0));
   backdrop-filter: blur(2px);
 }
@@ -227,23 +228,26 @@
 
 /* Misión y Visión */
 .bg-mision {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
   background: #6A2771;
   background: var(--Gradiente-Vio-Ama);
 }
 
 .cards-mis-vis {
   display: flex;
-  gap: 1rem;
-  justify-content: space-between;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .card {
   display: flex;
-  width: 50%;
+  width: 40%;
   border: 2px solid var(--Blanco);
   border-radius: 10px;
 }
@@ -269,16 +273,20 @@
 
 
 /* Servicios */
+#section-servicies {
+  padding: 5rem 2rem 1rem;
+  background-color: var(--Gris-Secundario);
+}
+
 .services {
   padding: 2rem;
-  background-color: var(--Gris-Secundario);
 }
 
 .card-group {
   display: grid;
-  gap: 3rem;
+  gap: 1.85rem;
   grid-template-columns: repeat(2, 1fr);
-  width: calc(100% - 3vw);
+  /* width: calc(100% - 3vw); */
   align-items: center;
 }
 
@@ -309,18 +317,37 @@
 
 
 /* Clientes */
+#colaboraciones {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 0rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Negro-Texto);
+}
+
+#colaboraciones h2 {
+  color: var(--Gris-Secundario);
+}
+
 .clientes {
   display: flex;
+  gap: 5rem;
   width: 100%;
   height: 150px;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
 .clientes img {
-  flex: 1;
-  height: 100%;
-  object-fit: cover; 
+  color: #fff;
+  width: auto;
+  height: 10vh;
 }
+
+
 
 
 /* Formulario */
@@ -328,12 +355,155 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--Violeta-Oscuro-Secundario);
+  padding: 3rem 0rem;
+  background: var(--Violeta-Brillante-Secundario);
 }
 
 .formulario {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
   margin: 1rem;
   padding: 2rem;
-  width: calc(100% - 5vw);
-  background: var(--Violeta-Principal);
+  width: 70vw;
+  border-radius: 10px;
+  background: var(--Violeta-Oscuro-Secundario);
+}
+
+.formulario img {
+  height: 50vh;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formulario p input,
+.formulario p input::placeholder,
+.formulario p textarea,
+.formulario p textarea::placeholder {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--Violeta-Brillante-Secundario);
+}
+
+.formulario p input:focus-visible{
+  outline: none;
+  background-color: var(--Violeta-Principal);
+}
+
+.formulario p input:is(:-webkit-autofill, :autofill) {
+  color: var(--Violeta-Oscuro-Secundario);
+  background-color: var(--Gris-Secundario) !important;
+}
+
+.formulario p input:focus-visible::placeholder{
+  color: var(--Gris-Secundario)
+}
+
+.formulario input,
+.formulario p textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid var(--Violeta-Brillante-Secundario);
+  color: var(--Violeta-Brillante-Secundario);
+}
+
+/* Incrementales de campo telefono - Chrome, Safari, Opera*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.info-gral {
+  display: flex;
+  flex-direction: column;
+  color: var(--Gris-Secundario);
+}
+
+form p.enviar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: .85rem;
+}
+
+form p.enviar button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--Blanco);
+  padding: .85rem 2rem;
+  border: 1px solid var(--Gris-Secundario);
+  border-radius: 5px;
+  background: var(--Gradiente-Violeta-90);
+  transition: all .3s;
+}
+
+
+@media (hover:hover) {
+  form p.enviar button:hover {
+    transform: scale(1.05);
+    background: var(--Violeta-Brillante-Secundario);
+  }
+}
+
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Violeta-Oscuro-Secundario);
+  padding: 3rem 0rem;
+  gap: 2rem;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+footer > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .cx div {
+  display: flex;
+  flex-direction: row;
+  gap: .45rem;
+  font-weight: 600;
+}
+
+footer .cx div a {
+  text-decoration: none;
+  color: var(--Violeta-Brillante-Secundario);
+  transition: all .3s;
+}
+
+@media (hover:hover) {
+  footer .cx div:hover a {
+    transform: translateY(-.5rem);
+    color: var(--Amarillo-Secundario);
+  }
+}
+
+footer div div {
+  color: var(--Violeta-Principal);
+  text-align: start;
 }

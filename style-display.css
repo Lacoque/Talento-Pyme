@@ -11,4 +11,16 @@
         transform: translate(-50%, -50%);
         object-fit: cover;
     }
+
+    .bg-mision {
+        height: fit-content;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .cards-mis-vis {
+        flex-direction: column;
+    }
 }
