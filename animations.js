@@ -12,4 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".slide-in-bottom").forEach((element) => {
         observer.observe(element);
     });
+
+    // let tween = gsap.to(".clientes", { y: -50 }),
+    //     st = ScrollTrigger.create({
+    //         trigger: ".clientes",
+    //         start: "top center",
+    //         end: "+=500",
+    //         animation: tween,
+    // });
+
+    // console.log(st.animation);
+
+
 });
