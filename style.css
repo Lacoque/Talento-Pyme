@@ -597,21 +597,24 @@ nav.navegador {
 .mensaje-exito {
   visibility: hidden;
   opacity: 0;
-  min-width: 250px;
+  min-width: 280px;
+  max-width: 80%;
   background-color: #4CAF50;
   color: #fff;
   text-align: center;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 20px;
   position: fixed;
-  z-index: 9999;
-  bottom: 30px; /* Lo eliminaremos */
-  right: 30px; /* Lo eliminaremos */
-  font-size: 16px;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-
-  /* Añade estos nuevos estilos para centrarlo */
+  z-index: 99999;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mensaje-exito.show {
+  visibility: visible;
+  opacity: 1;
 }
