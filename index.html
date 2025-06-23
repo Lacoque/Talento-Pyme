@@ -216,6 +216,10 @@
             Gracias por sumarte!
             <button type="submit">Enviar<i class="fa-solid fa-arrow-right"></i></button>
           </p>
+          <!-- Mensaje emergente -->
+<div id="mensaje-exito" class="mensaje-exito">
+  ¡Recibido! 
+</div>
         </form>
       </div>
     </div>
@@ -248,5 +252,35 @@
   <!-- FIN Gsap -->
   
   <script src="/animations.js"></script>
+  <script>
+    document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
+      e.preventDefault(); // Evita el envío por defecto
+  
+      const form = this;
+      const formData = new FormData(form);
+  
+      fetch('/', {
+        method: 'POST',
+        body: formData
+      })
+      .then(() => {
+        // Mostrar mensaje de éxito
+        const mensaje = document.getElementById('mensaje-exito');
+        mensaje.classList.add('show');
+  
+        // Ocultarlo después de unos segundos
+        setTimeout(() => {
+          mensaje.classList.remove('show');
+        }, 4000);
+  
+        // Limpiar formulario si quieres
+        form.reset();
+      })
+      .catch((error) => {
+        alert('Hubo un error al enviar el formulario.');
+        console.error(error);
+      });
+    });
+  </script>
 </body>
 </html>
