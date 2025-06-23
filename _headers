@@ -1,0 +1,22 @@
+# Cache para HTML (menos tiempo porque puede cambiar)
+/*.html
+  Cache-Control: public, max-age=86400
+
+# Cache para CSS, JS y fuentes
+/*.css
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/*.js
+  Cache-Control: public, max-age=604800, must-revalidate
+
+# Cache para imágenes (más tiempo)
+/assets/*
+/img/*
+/video/*
+/*.jpg
+/*.jpeg
+/*.png
+/*.gif
+/*.webp
+/*.avif
+  Cache-Control: public, max-age=2592000, immutable
