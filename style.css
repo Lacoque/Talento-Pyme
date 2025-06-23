@@ -605,13 +605,13 @@ nav.navegador {
   padding: 16px;
   position: fixed;
   z-index: 9999;
-  bottom: 30px;
-  right: 30px;
+  bottom: 30px; /* Lo eliminaremos */
+  right: 30px; /* Lo eliminaremos */
   font-size: 16px;
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-}
 
-.mensaje-exito.show {
-  visibility: visible;
-  opacity: 1;
+  /* Añade estos nuevos estilos para centrarlo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
