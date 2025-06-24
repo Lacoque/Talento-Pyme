@@ -104,12 +104,14 @@ h1 {
 }
 
 .hero h1 {
-  padding: 1rem 2.5rem 4rem;
-  text-align: start;
   width: 60%;
-  border-radius: 0px 10px 0px 0px;
-  background-color: #f4f4f4a1;
+  font-weight: 500;
+  letter-spacing: -.17vw;
+  text-align: start;
   margin-bottom: 0;
+  padding: 1rem 2.5rem 4rem;
+  background-color: #f4f4f4a1;
+  border-radius: 0px 10px 0px 0px;
 }
 
 .asesoramiento-mobile {
@@ -185,21 +187,46 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.experiencia h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.75px;
+  color: var(--Violeta-Oscuro-Secundario);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0rem 2rem 1rem;
+}
+
 .datos {
   display: flex;
   justify-content: space-around;
-  gap: 3rem;
+  gap: 1.5rem;
   overflow: hidden;
 }
 
 .datos article {
   width: 100%;
+  height: auto;
   display: flex;
-  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   padding: 2rem;
   border-radius: 5px;
   background-color: rgb(228, 228, 228, .5);
   backdrop-filter: blur(2px);
+}
+
+.datos article h2 {
+  font-weight: 900;
+  font-size: 10vh;
+  letter-spacing: -3.3px;
+}
+
+.datos article h2,
+.datos article p {
+  color: var(--Violeta-Oscuro-Secundario);
+  margin: 0;
 }
 
 .slide-in-bottom {
@@ -255,23 +282,28 @@ h1 {
   background: var(--Gradiente-Vio-Ama);
 }
 
+.bg-mision h2 {
+  font-size: 5vh;
+  color: var(--Gris-Secundario);
+}
+
 .bg-mision .redes-s {
   display: flex;
   height: fit-content;
   align-items: center;
-  color: var(--Negro-Texto);
+  color: var(--Gris-Secundario);
   gap: 1rem;
 }
 
 .bg-mision .redes-s a {
   padding: .5rem;
   text-decoration: none;
-  color: var(--Negro-Texto);
+  color: var(--Gris-Secundario);
 }
 
 @media (hover:hover) {
   .bg-mision .redes-s a:hover {
-    color: var(--Gris-Secundario);
+    color: var(--Violeta-Principal);
   }
 }
 
@@ -427,7 +459,6 @@ h1 {
   width: auto;
   height: 10vh;
 }
-
 
 
 
