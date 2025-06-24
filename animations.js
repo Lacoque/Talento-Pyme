@@ -13,15 +13,37 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 
-    // let tween = gsap.to(".clientes", { y: -50 }),
-    //     st = ScrollTrigger.create({
-    //         trigger: ".clientes",
-    //         start: "top center",
-    //         end: "+=500",
-    //         animation: tween,
-    // });
 
-    // console.log(st.animation);
+    function splitTextoYAnimar(elemento) {
+    const textoOriginal = elemento.textContent;
+    elemento.innerHTML = '';
+
+    textoOriginal.split('').forEach(letra => {
+        const span = document.createElement('span');
+        span.textContent = letra;
+        elemento.appendChild(span);
+    });
+
+    anime({
+        targets: elemento.querySelectorAll('span'),
+        opacity: [0, 1],
+        translateY: [20, 0],
+        delay: anime.stagger(30),
+        easing: 'easeOutExpo',
+        duration: 800
+    });
+    }
+
+    const theObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        splitTextoYAnimar(entry.target);
+        obs.unobserve(entry.target); // Se ejecuta solo una vez
+        }
+    });
+    }, { threshold: 0.3 }); // Se activa cuando 30% del elemento es visible
+
+    document.querySelectorAll('.anim').forEach(el => theObserver.observe(el));
 
 
 });
