@@ -249,6 +249,13 @@
     font-style: italic;
     font-weight: 700;
     }
+
+
+    
+    
+    .navegador-desktop {
+        display: none;
+    }
 }
 
 
@@ -295,5 +302,9 @@
     .card i:before {
         background-color: var(--Gris-Secundario);
         border-bottom: none;
+    }
+
+    .navegador-desktop {
+        display: none;
     }
 }
