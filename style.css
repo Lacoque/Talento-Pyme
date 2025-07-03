@@ -624,6 +624,19 @@ footer div div {
 nav.navegador {
   display: none;
 }
+.navegador-desktop {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--Blanco);
+  z-index: 99999;
+}
+.navegador-desktop img {
+  height: 8vh;
+  padding: 0.3rem 3rem;
+}
+
+
 /* Mensaje emergente "Gracias" */
 .mensaje-exito {
   visibility: hidden;
